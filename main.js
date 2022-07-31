@@ -49,6 +49,20 @@ const operate = (operator, num1, num2) => {
 console.log(operate('-', 3, 5))
 
 
+//Populate Display
+
+const buttons = document.querySelectorAll('button');
+const display = document.querySelector('.screen');
+let arith = []
+buttons.forEach((button) => {
+
+    button.addEventListener('click', () => {
+        display.textContent += `${button.innerHTML}`
+        arith.push(display.textContent);
+    });
+  });
+
+console.log(arith)
 
 
 
