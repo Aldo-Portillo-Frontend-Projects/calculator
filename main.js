@@ -1,44 +1,54 @@
+//Add:
+
 const add = function(a,b) {
 	return a+b;
 };
 console.log(add(2,3))
+
+//Subtract:
+
 const subtract = function(a,b) {
 	return a-b;
 };
 console.log(subtract(10,6))
-const sum = function(arr) {
-	const sum = arr.reduce((currentValue, accumulator)=>{
-    return currentValue += accumulator;
-  },0)
-  return sum;
-};
-console.log(sum([1,3,5,7,9]))
-const multiply = function(arr) {
-  const multiply = arr.reduce((currentValue, accumulator)=>{
-    return currentValue *= accumulator
-  },1)
-  return multiply;
-};
 
-console.log(multiply([2,4]))
-console.log(multiply([2,4,6,8,10,12,14]));
+//Multiply:
 
-const power = function(a, b) {
-	return a**b;
+const multiply = function(a,b) {
+	return a * b;
 };
+console.log(multiply(10,6))
 
-console.log(power(4,3))
+//Divide
 
-const factorial = function(num) {
-  let result = num;
-	while(num > 1){
-    num--;
-    result *= num;
-  }
-  if (result === 0){
-    return 1;
-  } else {
-    return result;
-  }
-  
+const divide = function(a,b) {
+	return a / b;
 };
+console.log(divide(10,5))
+
+
+//Operate Function
+
+const operate = (operator, num1, num2) => {
+    switch(operator) {
+        case '+':
+            return add(num1, num2);
+        break;
+        case '-':
+            return subtract(num1, num2);
+        break;
+        case '*':
+            return multiply(num1, num2);
+        break;
+        case '/':
+            return divide(num1, num2);
+        break;
+    }
+}
+
+console.log(operate('-', 3, 5))
+
+
+
+
+
