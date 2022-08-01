@@ -46,15 +46,16 @@ const operate = (num1, operator, num2) => {
     }
 }
 
-console.log(operate(3,'x', 5))
+console.log(operate(3,' x ', 5))
 
 
 //Populate Display
 
 const buttons = document.querySelectorAll('.display-button');
 const display = document.querySelector('.screen');
-const eval = document.querySelector('.large-btn')
-let arr =[]
+let arr =[];
+let str = '';
+let finalArr;
 
 buttons.forEach((button) => {
 
@@ -63,11 +64,17 @@ buttons.forEach((button) => {
         if(button.id === "ok"){
             display.textContent += button.textContent;
             //console.log(display.textContent)
-            arr = [];
+            arr =[]
             arr.push(display.textContent)
+
             console.log(arr)
         } else if (button.id === "clear"){
             display.textContent = "";
+            
+        } else if (button.id === "equal"){
+            str = arr.toString();
+            finalArr = str.split(" ")
+            display.textContent = operate(finalArr[0], finalArr[1], finalArr[2]);
         }
         
         }///event listener bracket
