@@ -29,7 +29,7 @@ console.log(divide(10,5))
 
 //Operate Function
 
-const operate = (operator, num1, num2) => {
+const operate = (num1, operator, num2) => {
     switch(operator) {
         case '+':
             return add(num1, num2);
@@ -37,32 +37,45 @@ const operate = (operator, num1, num2) => {
         case '-':
             return subtract(num1, num2);
         break;
-        case '*':
+        case 'x':
             return multiply(num1, num2);
         break;
-        case '/':
+        case '÷':
             return divide(num1, num2);
         break;
     }
 }
 
-console.log(operate('-', 3, 5))
+console.log(operate(3,'x', 5))
 
 
 //Populate Display
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.display-button');
 const display = document.querySelector('.screen');
-let arith = []
+const eval = document.querySelector('.large-btn')
+let arr =[]
+
 buttons.forEach((button) => {
 
+    // and for each one we add a 'click' listener
     button.addEventListener('click', () => {
-        display.textContent += `${button.innerHTML}`
-        arith.push(display.textContent);
-    });
-  });
+        if(button.id === "ok"){
+            display.textContent += button.textContent;
+            //console.log(display.textContent)
+            arr = [];
+            arr.push(display.textContent)
+            console.log(arr)
+        } else if (button.id === "clear"){
+            display.textContent = "";
+        }
+        
+        }///event listener bracket
+   )} ///for each bracker 
+);//for each parethsis
 
-console.log(arith)
 
-
-
+/*eval.addEventListener('click', ()=>{
+    populateScreen()
+})
+*/
