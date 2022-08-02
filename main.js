@@ -76,14 +76,14 @@ buttons.forEach((button) => {
             finalArr = str.split(" ")
             display.textContent = operate(finalArr[0], finalArr[1], finalArr[2]);
             console.log('hello')
-        } else if (button.id === "neg"){
-            console.log('hello');
+        } //else if (button.id === "neg"){
+           // console.log('hello');
             //let neg = display.textContent;
-            console.log(display.textContent)
-            console.log(neg)
-            console.log(neg[0])
-            //display.textContent = neg[0] * -1;
-        }
+            //console.log(display.textContent)
+            //console.log(neg)
+            //console.log(neg[0])
+            ////display.textContent = neg[0] * -1;
+        //}
         
         }///event listener bracket
    )} ///for each bracker 
