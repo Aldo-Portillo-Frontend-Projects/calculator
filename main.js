@@ -46,7 +46,7 @@ const operate = (num1, operator, num2) => {
     }
 }
 
-console.log(operate(3,' x ', 5))
+console.log(operate(3,'x', 5))
 
 
 //Populate Display
@@ -75,6 +75,14 @@ buttons.forEach((button) => {
             str = arr.toString();
             finalArr = str.split(" ")
             display.textContent = operate(finalArr[0], finalArr[1], finalArr[2]);
+            console.log('hello')
+        } else if (button.id === "neg"){
+            console.log('hello');
+            //let neg = display.textContent;
+            console.log(display.textContent)
+            console.log(neg)
+            console.log(neg[0])
+            //display.textContent = neg[0] * -1;
         }
         
         }///event listener bracket
